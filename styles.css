@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Ubuntu Mono', monospace;
+    background: #1a1a1a;
+    color: #00ff00;
+    line-height: 1.6;
+    overflow: hidden;
+}
+
+.terminal {
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+    border: 1px solid #333;
+    display: flex;
+    flex-direction: column;
+}
+
+.terminal-header {
+    background: #333;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #555;
+}
+
+.terminal-title {
+    color: #ccc;
+    font-size: 14px;
+    text-align: center;
+}
+
+.terminal-content {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background: #000;
+}
+
+.terminal-input-line {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    background: #000;
+    margin-top: 5px;
+}
+
+.prompt {
+    color: #00ff00;
+    margin-right: 10px;
+    white-space: nowrap;
+}
+
+.command-input {
+    background: transparent;
+    border: none;
+    color: #00ff00;
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 16px;
+    flex-grow: 1;
+    outline: none;
+}
+
+.command-input::placeholder {
+    color: #666;
+}
+
+.command-output {
+    margin-bottom: 10px;
+}
+
+.command-line {
+    color: #00ff00;
+    margin-bottom: 2px;
+}
+
+.output-text {
+    color: #ccc;
+    margin-bottom: 5px;
+    white-space: pre-wrap;
+    font-family: 'Ubuntu Mono', monospace;
+    line-height: 1.1;
+    font-size: 14px;
+}
+
+.error {
+    color: #ff6b6b;
+}
+
+.success {
+    color: #51cf66;
+}
+
+.warning {
+    color: #ffd43b;
+}
+
+.typing {
+    border-right: 2px solid #00ff00;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 50% { border-color: transparent; }
+    51%, 100% { border-color: #00ff00; }
+}
+
+@media (max-width: 768px) {
+    .terminal-content {
+        padding: 10px;
+    }
+    
+    .terminal-input-line {
+        padding: 10px;
+    }
+    
+    .prompt {
+        font-size: 14px;
+    }
+    
+    .command-input {
+        font-size: 14px;
+    }
+}
+
+.terminal-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.terminal-content::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+.terminal-content::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 4px;
+}
+
+.terminal-content::-webkit-scrollbar-thumb:hover {
+    background: #555;
+} 
