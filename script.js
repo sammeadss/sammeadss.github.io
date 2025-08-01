@@ -312,9 +312,9 @@ If download doesn't start automatically, click here:
 
 Resume Details:
 ├── Format: PDF
-├── Filename: Samuel_Meads_Resume.pdf
-├── Size: [File size will appear here]
-└── Last Updated: [Date will appear here]
+├── Filename: Meads_Samuel_Resume.pdf
+├── Size:
+└── Last Updated:
 
 [The download should start automatically in a new tab]
 `;
